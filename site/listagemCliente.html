@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Listagem de Clientes</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="principal.html">Vivaz Library</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="principal.html">Principal</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Cadastros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Usuario.html">Cadastro de Usuário</a></li>
+              <li><a class="dropdown-item" href="cliente.html">Cadastro de Cliente</a></li>
+              <li><a class="dropdown-item" href="produto.html">Cadastro de Produto</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="listagemUsuario.html">Listagem de Usuários</a></li>
+              <li><a class="dropdown-item active" href="listagemCliente.html">Listagem de Clientes</a></li>
+              <li><a class="dropdown-item" href="listagemProduto.html">Listagem de Produtos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <div class="container my-4">
+
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <h4 class="mb-1">Clientes</h4>
+          <small class="text-muted">Leitores cadastrados – Pearson, Winchester & cia.</small>
+        </div>
+        <a href="cliente.html" class="btn btn-success btn-sm">+ Novo Cliente</a>
+      </div>
+    </div>
+
+    <!-- Filtro -->
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-body">
+        <h6 class="mb-3">Pesquisar cliente</h6>
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Rachel, Castiel...">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Cidade</label>
+            <input type="text" class="form-control" placeholder="Cidade">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Situação</label>
+            <select class="form-select">
+              <option value="">Todos</option>
+              <option>Regular</option>
+              <option>Devedor</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-primary mt-2">Pesquisar</button>
+            <button type="reset" class="btn btn-outline-secondary mt-2">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tabela -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Cidade</th>
+                <th>Situação</th>
+                <th class="text-center" style="width: 140px;">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10</td>
+                <td>Rachel Zane</td>
+                <td>123.456.789-00</td>
+                <td>Nova York</td>
+                <td><span class="badge bg-success">Regular</span></td>
+                <td class="text-center">
+                  <button class="btn btn-outline-warning btn-sm">✏️ Editar</button>
+                  <button class="btn btn-outline-danger btn-sm">🗑️ Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Jessica Pearson</td>
+                <td>555.222.333-11</td>
+                <td>Chicago</td>
+                <td><span class="badge bg-success">Regular</span></td>
+                <td class="text-center">
+                  <button class="btn btn-outline-warning btn-sm">✏️ Editar</button>
+                  <button class="btn btn-outline-danger btn-sm">🗑️ Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Castiel Novak</td>
+                <td>987.654.321-00</td>
+                <td>Líbano</td>
+                <td><span class="badge bg-warning text-dark">Devedor</span></td>
+                <td class="text-center">
+                  <button class="btn btn-outline-warning btn-sm">✏️ Editar</button>
+                  <button class="btn btn-outline-danger btn-sm">🗑️ Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Crowley</td>
+                <td>000.000.000-00</td>
+                <td>Inferno</td>
+                <td><span class="badge bg-danger">Bloqueado</span></td>
+                <td class="text-center">
+                  <button class="btn btn-outline-warning btn-sm">✏️ Editar</button>
+                  <button class="btn btn-outline-danger btn-sm">🗑️ Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
